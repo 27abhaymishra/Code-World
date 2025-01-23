@@ -1,0 +1,112 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.container{
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+   }
+li{
+    color: rgb(143, 108, 65);
+    font-size: 25px;
+    margin: 10px;
+}
+.box{
+    margin: 40px;
+    color: white;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px 80px;
+    border-radius: 20px;
+    
+
+}
+input{
+    font-size: 25px;
+}
+
+
+#addtask{
+    font-size: 20px;
+    background-color: rgb(22, 20, 20);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.navbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(56, 56, 148);
+    color: white;
+    padding: 10px 20px;
+}
+.nav-head{
+    display: flex;
+    align-items: center;
+}
+#image-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li{
+    margin-right: 20px;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+#login{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.list-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    
+}
+button:hover{
+    background-color: rgb(44, 177, 177);
+    color: white;
+}
+.name{
+    list-style: none;
+}
+a:hover{
+color: rgb(24, 184, 184);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: white;
+    color: rgb(56, 56, 148);
+    padding: 5px 20px;
+    border-radius: 5px;
+}
