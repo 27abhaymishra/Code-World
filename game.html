@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+
+<style>
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.box{
+    background-color: rgba(17, 11, 11, 0.829);
+    padding: 30px 80px;
+    border-radius: 30px;
+    
+}
+
+#num1{
+    font-size: 25px;
+    background-color: rgb(190, 180, 166);
+    margin-right: 20px
+}
+#button{
+    font-size: 25px;
+    background-color: rgb(78, 78, 218);
+    
+}
+#button:hover{
+background-color: rgb(102, 179, 179);
+}
+#ans{
+font-size: 20px;
+color: rgb(165, 131, 131);
+}
+.navbar{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(56, 56, 148);
+        color: white;
+        padding: 10px 20px;
+    }
+    .nav-head{
+        display: flex;
+        align-items: center;
+    }
+    #image-icon{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .nav-links ul{
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links ul li{
+        margin-right: 20px;
+    }
+    .nav-links ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    #login{
+        background-color: white;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .list-style{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 120px;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        
+    }
+    button:hover{
+        background-color: rgb(44, 177, 177);
+        color: white;
+    }
+    li{
+        list-style: none;
+    }
+   a:hover{
+    color: rgb(24, 184, 184);
+   }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+  .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        background-color: white;
+        color: rgb(56, 56, 148);
+        padding: 5px 20px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-head">
+            <img src="Binary-5-e1674992509540-768x807.png" alt="image" id="image-icon">
+            <h2>Coding Thinker</h2>
+        </div>
+      
+        <ul class="list-style">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="game.html">Games</a></li>
+            <li><a href="Apps.html">Apps</a></li>
+          
+    <ul>
+        <div>
+            <div class="btn">
+                <a href="login.html"> <button id="login">LOG IN</button></a>
+             
+            </div>
+    </nav>
+    <div class="container">
+        <div class="box">
+            <h2>Guess the the number between 1 to 100..!</h2>
+            <div class="innerbox">
+         <input id="num1" type="number">
+         <button  id="button"  onclick="guess()">Start</button>
+            </div>
+            <p id="ans"></p>
+        </div>
+    </div>
+<script>
+    let rand = Math.floor(Math.random() * 100) + 1;
+let count = 10 ;
+     function guess(){
+      let number = parseInt(document.getElementById("num1").value) ;
+      count--;
+
+      if(count < 0){
+         alert("your chance is over !")
+         return ;
+      }else{
+          document.getElementById("ans").innerHTML = "number of chances left : " + count;
+      if(rand == number){
+          document.getElementById("ans").innerHTML = "Yeppp you guess correctly !! "
+      }else if( number > rand){
+          alert("guess lower !!!");
+      }else{
+          alert("guess higher !!!");
+      }
+      }
+      }
+</script>
+  
+</body>
+</html>
